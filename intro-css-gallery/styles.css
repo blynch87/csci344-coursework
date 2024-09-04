@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(224, 216, 216);
 }
 
 /* Your code here */
@@ -24,4 +25,5 @@ section p{
 main{
     background-color: rgb(224, 216, 216);
     padding: 50px;
+    margin-left: 50px;
 }
