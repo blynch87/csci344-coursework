@@ -1,0 +1,38 @@
+header{
+    background-color: #5C5346;
+    border: 1px solid black;    
+}
+
+ h1 {
+    display: flex;
+    margin-left: 30px;   
+    height: 20px;
+    align-items: center;
+    color: whitesmoke;
+}
+
+
+
+
+body {
+    background-color: #FAF0CA;
+}
+
+
+section {
+    margin-left: 30px;
+    margin-right: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+subject {
+    margin-top: 25px;
+    border: 1px solid blue;
+}
+
+p {
+    margin-left: 20px;
+}

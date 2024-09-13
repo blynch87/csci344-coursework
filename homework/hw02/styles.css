@@ -1,0 +1,93 @@
+html {
+    scroll-behavior: smooth;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-template-rows:  100px 1fr ;
+    width: 100%;
+    border: 1px solid red; 
+    margin-top: 68px;
+    height: 1000px;
+
+}
+
+.suggestions {
+   grid-area: 1 / 2 / 3 / 3;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   margin-right: 50px;
+
+}
+
+.friends {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.feed {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50px;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+main *{
+    border: 1px solid blue;
+
+
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid gray;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    background-color: white;
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style-type: none;
+}
+
+body { 
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: rgb(233, 230, 230);
+}
+
+li {
+    font-weight: bold;
+}
+
+#signout {
+    color: blue;
+}
