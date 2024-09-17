@@ -1,0 +1,270 @@
+body * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Begin Debugging Code */
+header,
+main,
+section,
+article,
+nav,
+.logo {
+    border: solid 2px #CCC;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+aside,
+body>header,
+main,
+.news-feed {
+    border: solid 4px #000;
+    padding: 10px;
+    margin: 10px;
+}
+
+
+#top-header {
+ background-color: white;
+ position: fixed;
+ top: 0;
+ left: 0;
+ margin: 0;
+ width: 100%;
+ display: flex; 
+ justify-content: space-between;
+ height: 75px;
+ align-items: center;
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    width: 200px;
+    font-weight: bold;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+}
+
+p {
+    margin: 0;
+}
+
+.logo {
+    border: none;
+}
+
+article {
+    width: 100%;
+    margin-left: 0;
+}
+
+button {
+    border: none;
+    background-color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: blue;
+}
+
+aside {
+    height: 100%;
+    position: fixed;
+    top: 100px;
+    right: 3vw;
+    width: 35vw;
+}
+
+main {
+    margin-top: 110px;
+    width: 58vw;
+    margin-left: 3vw;
+    height: 5000px;
+    background-color: lightgray;
+    padding: 5px;
+    padding-left: 50px;
+}
+
+main * {
+    background-color: white;
+}
+
+section {
+    padding: 0;
+}
+
+#cards {
+    background-color: lightgrey;
+}
+
+#asideHeader {
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    gap: 20px;
+}
+
+#asideSection {
+    width: 65%;
+}
+
+#sugHead {
+    color: grey;
+}
+
+#profilepic {
+    width: 75px;
+}
+
+#smallPic {
+    width: 30px;
+}
+
+#follow {
+    background-color: lightgrey;
+    font-size: small;
+}
+
+#cardA {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cardsA {
+    display: flex;
+    flex-direction: column;
+}
+
+#userSug {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    align-content: center;
+}
+
+#userSug * {
+    border: solid black 2px;
+    font-size: small;
+}
+
+#smallPic {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+#cardHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#cardHead * {
+    font-weight: bold;
+    font-size: medium;
+}
+
+article *{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#stories {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2px;
+}
+
+#story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+#storyName {
+    font-size: x-small;
+}
+
+#bigPic {
+    width: 100%;
+    /* height: auto; */
+}
+
+#likeButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+#content {
+    padding: 5px;
+}
+
+#contentDescrip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+}
+
+#comments {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+#userComment {
+    display: flex;
+    justify-content: row;
+    gap: 10px;
+    align-items: center;
+}
+
+#commentInput {
+    display: flex;
+    justify-content: row;
+    justify-content: space-between;
+}
+
+#contentBold {
+    font-weight: bold;
+}
+
+#likes {
+    padding-left: 5px;
+}
+
+@media (max-width: 800px) {
+    aside {
+        display: none;
+    }
+    main {
+        margin-top: 110px;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 3vw;
+        padding-right: 3vw;
+    }
+}
