@@ -1,5 +1,5 @@
 header{
-    background-color: #5C5346;
+    background-color: #190d5b;
     border: 1px solid black;    
 }
 
@@ -15,7 +15,8 @@ header{
 
 
 body {
-    background-color: #FAF0CA;
+    background-color: #dededa;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
 }
 
 
@@ -25,12 +26,12 @@ section {
     gap: 20px;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
 }
 
-subject {
-    margin-top: 25px;
-    border: 1px solid blue;
+div {
+    background-color: white;
+    border-radius: 5%;
+    padding: 20px;
 }
 
 p {

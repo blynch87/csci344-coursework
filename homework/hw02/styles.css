@@ -1,109 +1,347 @@
-html {
-    scroll-behavior: smooth;
-}
 
-img {
-    width:100%;
-    height:auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 
-#shead {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-    width: 100%;
-    padding: 10px;
-}
-
-main{
-    display: grid;
-    grid-template-columns: 60% 1fr;
-    grid-template-rows:  100px 1fr ;
-    width: 100%;
-    border: 1px solid red; 
-    margin-top: 68px;
-    height: 1000px;
-
-}
-
-.suggestions {
-   grid-area: 1 / 2 / 3 / 3;
-   display: flex;
-   align-items: center;
-   justify-content: flex-start;
-   margin-right: 50px;
-   height: fit-content;
-   /* position: fixed; */
-}
-
-.friends {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50px;
-}
-
-.feed {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-left: 50px;
-    height: 500px;
-}
-
-section {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin: 10px;
-}
-
-main *{
-    border: 1px solid blue;
-
-
-}
-
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: 1px solid gray;
-    padding-left: 20px;
-    padding-right: 20px;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    top: 0;
-    background-color: white;
-}
-
-body *{
+body * {
     box-sizing: border-box;
 }
 
-ul {
+body {
+    margin: 0;
+    background: rgb(234, 233, 233);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Begin Debugging Code */
+/* header,
+main,
+section,
+article,
+nav,
+.logo {
+    border: solid 2px #CCC;
+    padding: 10px;
+    margin: 10px;
+} */
+
+
+aside,
+body>header,
+main,
+.news-feed {
+    /* border: solid 4px #000; */
+    padding: 10px;
+    margin: 10px;
+}
+
+
+.top-header {
+ background-color: white;
+ position: fixed;
+ top: 0;
+ left: 0;
+ margin: 0;
+ width: 100%;
+ display: flex; 
+ justify-content: space-between;
+ height: 75px;
+ align-items: center;
+ padding-left: 30px;
+ padding-right: 30px;
+ font-family: 'comfortaa';
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    width: 160px;
+    font-weight: bold;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+}
+
+p {
+    margin: 0;
+}
+
+article {
+    width: 100%;
+    margin-left: 0;
+}
+
+button {
+    border: none;
+    background-color: white;
+    /* font-weight: bold; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    color: blue;
+}
+
+.post {
+    font-size: small;
+    font-weight: normal;
+}
+
+aside {
+    height: 100%;
+    position: fixed;
+    top: 80px;
+    right: 3vw;
+    width: 35vw;
+}
+
+main {
+    margin-top: 80px;
+    width: 58vw;
+    margin-left: 3vw;
+    height: 5000px;
+    background-color: rgb(234, 233, 233);
+    padding: 5px;
+    padding-left: 50px;
+}
+
+main * {
+    background-color: white;
+}
+
+section {
+    padding: 0;
+}
+
+.cards {
+    background-color: rgb(234, 233, 233);
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+
+.asideHeader {
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    gap: 20px;
+    font-family: 'comfortaa';
+}
+
+.asideSection {
+    width: 65%;
+}
+
+.sugHead {
+    color: grey;
+}
+
+.profilepic {
+    width: 75px;
+    border-radius: 50%;
+}
+
+.smallPic {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.follow {
+    background-color: rgb(234, 233, 233);
+    font-size: small;
+}
+
+.cardA {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 10px; */
+    width: 250px;
+    
+}
+
+.cardsA {
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    list-style-type: none;
 }
 
-body { 
-    font-family:Arial, Helvetica, sans-serif;
-    margin: 0;
-    background-color: rgb(233, 230, 230);
+.userSug {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 300px;
+    margin-left: 20px;
 }
 
-li {
+.follow {
+    /* margin-left: 20px; */
+}
+
+.suggForYou {
+    font-size: small;
+    color: grey;
+}
+
+.smallPic {
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.cardHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: 5px;
+    height: 50px;
+}
+
+.cardHead .cardUser {
+    font-family: 'comfortaa';
+}
+
+
+.cardHead * {
+    font-weight: bold;
+    font-size: medium;
+}
+
+article *{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.stories {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    width: 80px;
+}
+
+.storyName {
+    font-size: x-small;
+}
+
+.bigPic {
+    width: 100%;
+    /* height: auto; */
+}
+
+.likeButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    padding-bottom: 10px;
+    font-size: medium;
+}
+
+.content {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.contentDescrip {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+}
+
+.userComment {
+    display: flex;
+    justify-content: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.commentInput {
+    display: flex;
+    justify-content: row;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid rgb(234, 233, 233);
+    align-items: center;
+}
+
+.addComment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.addComment div {
+    font-size: small;
+    color: grey;
+}
+
+.contentBold {
     font-weight: bold;
 }
 
-#signout {
-    color: blue;
+.likes {
+    padding-left: 5px;
+}
+
+.smallUser {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.oneDay {
+    font-size: small;
+    color: grey;
+}
+
+.heart {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+    aside {
+        display: none;
+    }
+    main {
+        margin-top: 90px;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
 }

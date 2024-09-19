@@ -1,16 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
 body * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background: lightgrey;
+    background: rgb(234, 233, 233);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
 /* Begin Debugging Code */
-header,
+/* header,
 main,
 section,
 article,
@@ -19,20 +22,20 @@ nav,
     border: solid 2px #CCC;
     padding: 10px;
     margin: 10px;
-}
+} */
 
 
 aside,
 body>header,
 main,
 .news-feed {
-    border: solid 4px #000;
+    /* border: solid 4px #000; */
     padding: 10px;
     margin: 10px;
 }
 
 
-#top-header {
+.top-header {
  background-color: white;
  position: fixed;
  top: 0;
@@ -43,12 +46,15 @@ main,
  justify-content: space-between;
  height: 75px;
  align-items: center;
+ padding-left: 30px;
+ padding-right: 30px;
+ font-family: 'comfortaa';
 }
 
 nav {
     display:flex;
     justify-content: space-between;
-    width: 200px;
+    width: 160px;
     font-weight: bold;
     left: 0;
     flex-direction: row;
@@ -60,10 +66,6 @@ p {
     margin: 0;
 }
 
-.logo {
-    border: none;
-}
-
 article {
     width: 100%;
     margin-left: 0;
@@ -72,26 +74,31 @@ article {
 button {
     border: none;
     background-color: white;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     color: blue;
 }
 
+.post {
+    font-size: small;
+    font-weight: normal;
+}
+
 aside {
     height: 100%;
     position: fixed;
-    top: 100px;
+    top: 80px;
     right: 3vw;
     width: 35vw;
 }
 
 main {
-    margin-top: 110px;
+    margin-top: 80px;
     width: 58vw;
     margin-left: 3vw;
     height: 5000px;
-    background-color: lightgray;
+    background-color: rgb(234, 233, 233);
     padding: 5px;
     padding-left: 50px;
 }
@@ -104,78 +111,106 @@ section {
     padding: 0;
 }
 
-#cards {
-    background-color: lightgrey;
+.cards {
+    background-color: rgb(234, 233, 233);
+    gap: 20px;
+    padding-top: 10px;
 }
 
-#asideHeader {
+.card {
+    margin-bottom: 20px;
+}
+
+
+.asideHeader {
     display: flex;
     justify-content: row;
     align-items: center;
     gap: 20px;
+    font-family: 'comfortaa';
 }
 
-#asideSection {
+.asideSection {
     width: 65%;
 }
 
-#sugHead {
+.sugHead {
     color: grey;
 }
 
-#profilepic {
+.profilepic {
     width: 75px;
+    border-radius: 50%;
 }
 
-#smallPic {
+.smallPic {
     width: 30px;
+    border-radius: 50%;
 }
 
-#follow {
-    background-color: lightgrey;
+.follow {
+    background-color: rgb(234, 233, 233);
     font-size: small;
 }
 
-#cardA {
+.cardA {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    /* gap: 10px; */
+    width: 250px;
+    
 }
 
-#cardsA {
+.cardsA {
     display: flex;
     flex-direction: column;
+    gap: 20px;
 }
 
-#userSug {
+.userSug {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
     align-content: center;
+    width: 300px;
+    margin-left: 20px;
 }
 
-#userSug * {
-    border: solid black 2px;
+.follow {
+    /* margin-left: 20px; */
+}
+
+.suggForYou {
     font-size: small;
+    color: grey;
 }
 
-#smallPic {
+.smallPic {
     width: 40px;
     height: 40px;
 }
 
 
 
-#cardHead {
+.cardHead {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    align-items: center;
+    margin-bottom: 0;
+    padding-top: 5px;
+    height: 50px;
 }
 
-#cardHead * {
+.cardHead .cardUser {
+    font-family: 'comfortaa';
+}
+
+
+.cardHead * {
     font-weight: bold;
     font-size: medium;
 }
@@ -185,74 +220,116 @@ article *{
     margin-bottom: 5px;
 }
 
-#stories {
+.stories {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 2px;
+    gap: 5px;
 }
 
-#story {
+.story {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 5px;
+    width: 80px;
 }
 
-#storyName {
+.storyName {
     font-size: x-small;
 }
 
-#bigPic {
+.bigPic {
     width: 100%;
     /* height: auto; */
 }
 
-#likeButtons {
+.likeButtons {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 5px;
+    padding-bottom: 10px;
+    font-size: medium;
 }
 
-#content {
-    padding: 5px;
+.content {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-#contentDescrip {
+.contentDescrip {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 5px;
     align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
-#comments {
+.comments {
     display: flex;
     flex-direction: column;
     padding-left: 5px;
 }
 
-#userComment {
+.userComment {
     display: flex;
     justify-content: row;
     gap: 10px;
     align-items: center;
 }
 
-#commentInput {
+.commentInput {
     display: flex;
     justify-content: row;
     justify-content: space-between;
+    padding: 10px;
+    border: 1px solid rgb(234, 233, 233);
+    align-items: center;
 }
 
-#contentBold {
+.addComment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.addComment div {
+    font-size: small;
+    color: grey;
+}
+
+.contentBold {
     font-weight: bold;
 }
 
-#likes {
+.likes {
     padding-left: 5px;
+}
+
+.smallUser {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.oneDay {
+    font-size: small;
+    color: grey;
+}
+
+.heart {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.logo {
+    font-weight: bold;
 }
 
 @media (max-width: 800px) {
@@ -260,11 +337,11 @@ article *{
         display: none;
     }
     main {
-        margin-top: 110px;
+        margin-top: 90px;
         width: 100%;
         margin-left: 0;
         margin-right: 0;
-        padding-left: 3vw;
-        padding-right: 3vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
     }
 }
