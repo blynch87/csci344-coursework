@@ -45,21 +45,6 @@ nav {
     flex-direction: row;
 }
 
-/* main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-.card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border: 1px solid gray;
-    display: flex;
-    padding: 10px;
-    margin: 10px;
-} */
-
 h1, h2, h3 {
     font-family: "Passion One";
 }
@@ -101,7 +86,7 @@ img{
     flex-direction: column;
     justify-content: flex-start;
     border: 1px solid black;
-    align-content: flex-start;
+    align-items: flex-start;
 }
 
 .card-info * {
