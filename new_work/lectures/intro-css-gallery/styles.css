@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(255, 219, 73);
+  width: 100vw;
+  padding: 40px;
+}
+
+section {
+  border: solid 1px rgb(188, 188, 188);
+  display: inline-block;
+  margin: 25px;
+}
+
+section p {
+  padding-left: 10px;
+}
+
+h1:hover {
+  background-color: black;
+  color: yellow;
+  font-size: 250%;
+}
+/* Your code here */
