@@ -56,14 +56,21 @@ const dataToHTML = (course) => {
     return returnList;
   }
 
-  let loc = "";
+  let loc = "TBD";
   if (course.Location.FullLocation != null) {
     loc = course.Location.FullLocation;
   }
 
-  let days = "";
+  let days = "TBD";
   if (course.Days != null) {
     days = course.Days;
+  }
+
+  let open = "";
+  if (isClassFull(course)) {
+    open = '<i class="fa-solid fa-circle-xmark"></i> Closed';
+  } else {
+    open = '<i class="fa-solid fa-circle-check"></i> Open';
   }
 
   return `
@@ -71,8 +78,7 @@ const dataToHTML = (course) => {
             ${course.Code}
             <h2>${course.Code}: ${course.Title}</h2>
             <p>
-                <i class="fa-solid fa-circle-check"></i> 
-                Open  &bull; ${course.CRN} &bull; Seats Available: ${
+                ${open}  &bull; ${course.CRN} &bull; Seats Available: ${
     course.EnrollmentMax - course.EnrollmentCurrent
   }
             </p>
