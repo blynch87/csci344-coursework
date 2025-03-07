@@ -214,17 +214,21 @@ const search = (ev) => {
 };
 
 // Your function below. This activity is extra credit:
-const doesTermMatch = (course) => {
-  if (tracks.name.toLowerCase().includes(searchTerm.toLowerCase())) {
+const doesTermMatch = (track) => {
+  if (
+    track.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    track.artist.name.toLowerCase().includes(searchTerm.toLowerCase())
+  ) {
     return true;
   } else {
     return false;
   }
 };
 
-function findTracks(searchTerm) {
-  let newTracks = tracks.filter(doesTermMatch(searchTerm));
+function findTracks() {
+  let newTracks = tracks.filter(doesTermMatch);
   let target = document.querySelector("#track-list");
+  target.innerHTML = "";
   for (const item of newTracks) {
     let snippet = ` 
          <section class="track">
