@@ -5,7 +5,11 @@ import App from "./App.jsx";
 function main() {
   const rootEl = document.getElementById("app");
   const root = createRoot(rootEl);
-  root.render(<App />);
+  root.render(
+    <div>
+      <App />
+    </div>
+  );
 }
 
 main();
