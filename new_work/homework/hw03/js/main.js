@@ -32,7 +32,7 @@ function showNav() {
 
 // implement remaining functionality below:
 
-//await / async syntax:
+//////////////     POSTS     //////////////
 async function getPosts() {
   const response = await fetch(
     "https://photo-app-secured.herokuapp.com/api/posts/?limit=10",
@@ -136,6 +136,7 @@ function renderPosts(postList) {
   postList.forEach(renderPost);
 }
 
+//////////////     Bookmark     //////////////
 function renderBookmarkButton(postJSON) {
   let template = "";
   if (postJSON.current_user_bookmark_id) {
@@ -154,7 +155,6 @@ function renderBookmarkButton(postJSON) {
   return template;
 }
 
-//await / async syntax:
 window.createBookmark = async function (postID) {
   const postData = {
     post_id: postID,
@@ -189,6 +189,7 @@ window.deleteBookmark = async function (postID) {
   console.log(data);
 };
 
+//////////////     Profile     //////////////
 async function getProfile() {
   const response = await fetch(
     "https://photo-app-secured.herokuapp.com/api/profile/",
@@ -214,6 +215,7 @@ function renderRightPanelTop(profile) {
   target.insertAdjacentHTML("beforeend", snippet);
 }
 
+//////////////     Suggestions     //////////////
 async function getSuggestions() {
   const response = await fetch(
     "https://photo-app-secured.herokuapp.com/api/suggestions/",
@@ -249,6 +251,7 @@ function renderSuggestion(data) {
   target.insertAdjacentHTML("beforeend", snippet);
 }
 
+//////////////     Follow/Unfollow     //////////////
 async function getFollowers() {
   const response = await fetch(
     "https://photo-app-secured.herokuapp.com/api/following/",
@@ -280,7 +283,6 @@ async function unfollowUser(inData) {
   console.log(data);
 }
 
-//await / async syntax:
 async function followUser(inData) {
   const postData = {
     user_id: inData,
@@ -317,6 +319,7 @@ window.followToggle = async function (inData) {
   }
 };
 
+//////////////     Stories     //////////////
 async function getStories() {
   const response = await fetch(
     "https://photo-app-secured.herokuapp.com/api/stories/",
@@ -339,7 +342,7 @@ function renderStories(data) {
 
 function renderStory(data) {
   let target = document.querySelector("#stories");
-  let snippet = `        <div style= "margin-right: 25px" class="flex flex-col justify-center items-center">
+  let snippet = `        <div class="flex flex-col justify-center items-center">
           <img
             src="${data.user.thumb_url}"
             class="rounded-full border-4 border-gray-300"
@@ -350,6 +353,7 @@ function renderStory(data) {
   target.insertAdjacentHTML("beforeend", snippet);
 }
 
+//////////////     Like     //////////////
 function renderLikeButton(postJSON) {
   let template = "";
   if (postJSON.current_user_like_id) {
