@@ -155,7 +155,7 @@ def exercise6():
         return '"location" and "term" are required query parameters'
     base_url = 'https://www.apitutor.org/yelp/simple/v3/businesses/search'
     url = f'{base_url}?location={location}&term={search_term}'
-
+#Comment
     response = requests.get(url)
     restaurants = response.json()
     return render_template(
