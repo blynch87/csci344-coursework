@@ -32,11 +32,11 @@ export default function Post({ postData, token }) {
               postID={postData.id}
               token={token}
             />
-            <button>
-              <i className="far fa-comment" aria-label="Comment on post"></i>
+            <button aria-label="Comment on post">
+              <i className="far fa-comment"></i>
             </button>
-            <button>
-              <i className="far fa-paper-plane" aria-label="Share post"></i>
+            <button aria-label="Share post">
+              <i className="far fa-paper-plane"></i>
             </button>
           </div>
           <div>

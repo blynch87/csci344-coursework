@@ -16,7 +16,7 @@ export default function Bookmark({ bookmarkID, postID, token }) {
     setBookmark_ID(responseData.id);
   }
 
-  async function deleteBookmark(postID) {
+  async function deleteBookmark() {
     const deleteURL = "/api/bookmarks/" + bookmark_ID;
     const response = await deleteDataFromServer(token, deleteURL);
     setBookmark_ID(null);
@@ -24,14 +24,22 @@ export default function Bookmark({ bookmarkID, postID, token }) {
 
   if (bookmark_ID) {
     return (
-      <button onClick={deleteBookmark}>
-        <i className="fas fa-bookmark" aria-label="Bookmark post"></i>
+      <button
+        onClick={deleteBookmark}
+        aria-label="Bookmark post on"
+        aria-checked="true"
+      >
+        <i className="fas fa-bookmark"></i>
       </button>
     );
   } else {
     return (
-      <button onClick={createBookmark}>
-        <i className="far fa-bookmark" aria-label="Bookmark post"></i>
+      <button
+        onClick={createBookmark}
+        aria-label="Bookmark post off"
+        aria-checked="false"
+      >
+        <i className="far fa-bookmark"></i>
       </button>
     );
   }

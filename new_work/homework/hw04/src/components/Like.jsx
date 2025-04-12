@@ -15,26 +15,31 @@ export default function Like({ likeID, postID, token }) {
   }
 
   async function deleteLike() {
-    const sendData = {
-      post_id: postID,
-    };
-    const responseData = await deleteDataFromServer(token, sendData);
-    console.log(responseData);
-    setlike_ID(responseData.id);
+    const deleteURL = "/api/likes/" + like_ID;
+    const response = await deleteDataFromServer(token, deleteURL);
+    setlike_ID(null);
   }
 
   console.log(likeID);
   console.log(like_ID);
   if (like_ID) {
     return (
-      <button>
-        <i className="fas text-red-700 fa-heart" aria-label="Like post"></i>
+      <button
+        onClick={deleteLike}
+        aria-label="Like post on"
+        aria-checked="true"
+      >
+        <i className="fas text-red-700 fa-heart"></i>
       </button>
     );
   } else {
     return (
-      <button onClick={createLike}>
-        <i className="far fa-heart" aria-label="Like post"></i>
+      <button
+        onClick={createLike}
+        aria-label="Like post off"
+        aria-checked="false"
+      >
+        <i className="far fa-heart"></i>
       </button>
     );
   }
