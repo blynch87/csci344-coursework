@@ -1,0 +1,38 @@
+Please answer the following two questions:
+
+1. What is a join (just in your own words) and why is it useful?
+
+It allows tables connect to eachother and communicate values.
+For instance if a film table only has a category_id column but you
+want to print all the movies with the actual name of the category
+instead of the number associated with it, you could join it with
+a category table which has a category_name column corresponding to 
+the category_id.
+
+
+
+2. Consider the structure of the posts table: 
+why would you want to use a foreign key (user_id) to the 
+users table instead of storing the username, first_name, 
+and last_name in the posts table?
+
+Because that information is already stored in the users table.
+Storing the same data like that in multiple tables would make the 
+data set unnecessarily larger. This also defeats the purpose of having
+multiple tables in the first place. Without multiple tables, the data
+would become unorganized and difficult to manage.
+
+and
+
+"Suppose a user changes their name or username. If it's stored in multiple places:
+
+    You’d have to update every post manually.
+
+    If you forget or miss some, your data becomes inconsistent.
+
+With a user_id foreign key:
+
+    You only update the info once in the users table.
+
+    All posts still point to the correct user."
+-ChatGPT
