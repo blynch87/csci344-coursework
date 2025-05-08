@@ -14,8 +14,8 @@ from tests.test_posts_list_post import TestPostListEndpoint
 from tests.test_profile import TestProfileEndpoint
 from tests.test_stories_list import TestStoryListEndpoint
 
-# from tests.test_comments_delete import TestCommentDetailEndpoint
-# from tests.test_comments_post import TestCommentListEndpoint
+from tests.test_comments_delete import TestCommentDetailEndpoint
+from tests.test_comments_post import TestCommentListEndpoint
 # from tests.test_followers_list import TestFollowerListEndpoint
 # from tests.test_following_delete import TestFollowingDetailEndpoint
 # from tests.test_following_list_post import TestFollowingListEndpoint

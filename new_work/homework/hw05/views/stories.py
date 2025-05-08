@@ -14,8 +14,16 @@ class StoriesListEndpoint(Resource):
 
     def get(self):
         # TODO: Add GET Logic...
+
+        authorized_users = get_authorized_user_ids(self.current_user)
+
+        stories = (Story.query.filter(Story.user_id.in_(authorized_users)))
+
+        dumper = [s.to_dict() for s in stories]
+
+
         return Response(
-            json.dumps([]),
+            json.dumps(dumper),
             mimetype="application/json",
             status=200,
         )
